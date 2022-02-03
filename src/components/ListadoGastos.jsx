@@ -1,7 +1,7 @@
 import React from 'react';
 import Gasto from './Gasto';
 
-export const ListadoGastos = ({gastos}) => {
+const ListadoGastos = ({gastos}) => {
   return (
     <div className='listado-gastos contenedor'>
       <h2>{gastos.length ? 'Gastos' : 'No hay Gastos aun'}</h2>
@@ -14,4 +14,6 @@ export const ListadoGastos = ({gastos}) => {
       
     </div>
   )
-};
+}
+
+export default ListadoGastos

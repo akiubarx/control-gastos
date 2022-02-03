@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatearFecha } from '../helpers'
 
-function Gasto({gasto}) {
+const Gasto = ({gasto}) => {
   const { categoria, nombre, cantidad, id } = gasto;
   return (
     <div className='gasto sombra'>
