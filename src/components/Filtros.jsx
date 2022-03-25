@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-
-const Filtros = ( filtro, setFiltro) => {
+//Recordatorio a futuro, aplicar siempre destructuring a los props ({ ejemplo, ejemplo2 })
+const Filtros = ( {filtro, setFiltro} ) => {
   return (
     <div className='filtros sombra contenedor'>
       <form>
@@ -10,7 +10,7 @@ const Filtros = ( filtro, setFiltro) => {
             value={filtro}
             onChange={e => setFiltro(e.target.value) }
           >
-            <option value="">-- Selecciona --</option>
+            <option value="">-- Ver todos los gastos --</option>
             <option value="ahorro">Ahorro</option>
             <option value="comida">Comida</option>
             <option value="casa">Casa</option>

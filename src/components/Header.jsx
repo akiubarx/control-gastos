@@ -1,8 +1,8 @@
 import React from 'react'
 import NuevoPresupuesto from './NuevoPresupuesto'
 import ControlPresupuesto from './ControlPresupuesto'
-
-const Header = ({ gastos, presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto }) => {
+//Recordatorio a futuro, aplicar siempre destructuring a los props ({ ejemplo, ejemplo2 })
+const Header = ({ gastos, setGastos, presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto }) => {
   return (
     <header>
       <h1>Planificador de Gastos</h1>
@@ -11,7 +11,10 @@ const Header = ({ gastos, presupuesto, setPresupuesto, isValidPresupuesto, setIs
       {isValidPresupuesto ? (
         <ControlPresupuesto
           gastos={gastos}
+          setGastos={setGastos}
           presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
         />
       ) : (
         <NuevoPresupuesto

@@ -55,7 +55,7 @@ function App() {
                               //Accedemos a cada gasto y retornamos los correspondientes
       setGastosFiltrados(gastosFiltrados)
     }
-  }, []);
+  }, [filtro]);
 
   useEffect(() => {
     const presupuestoLS = Number(localStorage.getItem('presupuesto')) ?? 0;
@@ -65,8 +65,6 @@ function App() {
       setIsValidPresupuesto(true)
     }
   }, [])
-  
-  
 
   const handleNuevoGasto = () =>{
     setModal(true)
@@ -106,6 +104,7 @@ function App() {
     <div className={modal ? 'fijar' : ''}>
       <Header
         gastos={gastos}
+        setGastos={setGastos}
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
         isValidPresupuesto={isValidPresupuesto}
@@ -123,6 +122,8 @@ function App() {
               gastos={gastos}
               setGastoEditar={setGastoEditar}
               eliminarGasto={eliminarGasto}
+              filtro={filtro}
+              gastosFiltrados={gastosFiltrados}
             />
           </main>
           <div className='nuevo-gasto'>

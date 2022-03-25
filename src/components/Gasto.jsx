@@ -20,14 +20,14 @@ import  IconoSuscripciones  from '../img/icono_suscripciones.svg'
 
 const diccionarioIconos = { 
   ahorro : IconoAhorro,
-  comida : IconoCasa,
-  casa : IconoComida,
+  comida : IconoComida,
+  casa : IconoCasa,
   gastos : IconoGastos,
   ocio : IconoOcio,
   salud : IconoSalud,
   suscripciones: IconoSuscripciones
 }
-
+//Recordatorio a futuro, aplicar siempre destructuring a los props ({ ejemplo, ejemplo2 })
 const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
   const leadingActions = () =>(
